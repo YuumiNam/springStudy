@@ -12,8 +12,8 @@ public class HelloController {
 	}
 	
 	@RequestMapping("/hello2")
-	public String hello(String name, Long no) {
-		System.out.println("name : " + name + " no : " + no);
+	public String hello(String name) {
+		System.out.println("name : " + name);
 		return "/WEB-INF/views/hello.jsp";
 	}
 }
