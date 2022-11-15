@@ -25,7 +25,8 @@ public class UserController {
 		return "redirect:/";
 	}
 	
-	// RequrestParam은 없어도 자동으로 만들어지지만 명시 해주는것이 좋다.
+	// RequrestParam은 없어도 자동으로 만들어지지만
+	// 명시 해주는것이 좋다.
 	@ResponseBody
 	@RequestMapping("/update")
 	public String update(@RequestParam("n") String name) {
