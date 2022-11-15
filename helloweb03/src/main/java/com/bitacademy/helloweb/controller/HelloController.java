@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloController {
+	
 	@RequestMapping("/hello")
 	public String hello() {
 		return "/WEB-INF/views/hello.jsp";

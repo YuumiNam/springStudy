@@ -1,0 +1,19 @@
+package com.bitacademy.helloweb.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+/**
+ *  @RequestMapping 메소드 다중 매핑
+ */
+
+@Controller
+public class MainController {
+	
+	@ResponseBody
+	@RequestMapping({"","/main","/a/b/c/main"})
+	public String main() {
+		return "MainController.main()";
+	}
+}
