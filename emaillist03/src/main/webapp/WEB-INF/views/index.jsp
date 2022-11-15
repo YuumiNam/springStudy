@@ -35,7 +35,7 @@
 	
 	<br>
 	<p>
-		<a href = "./form">추가메일 등록</a>
+		<a href = "./add">추가메일 등록</a>
 	</p>
 	<br>
 	

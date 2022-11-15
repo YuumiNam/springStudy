@@ -31,8 +31,7 @@ public class EmaillistController {
 	
 	@RequestMapping(value="/add", method=RequestMethod.POST)
 	public String add(EmaillistVo vo) {
-		System.out.println(vo);
-		// emaillistRepository.insert(vo);
+		emaillistRepository.insert(vo);
 		return "redirect:/";
 	}
 }
