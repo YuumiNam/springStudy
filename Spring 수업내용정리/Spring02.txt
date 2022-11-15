@@ -25,3 +25,30 @@
 8) Handler에게 url을 주고 정보를 받음
 String
 ModelAndView
+
+
+
+
+2. Listener가 돌아가는 순서
+1) web.xml에 ContextLoadListener를 만들어줌
+
+<!-- init -->
+2) init param이 없다면 web.xml있는 디렉토리에 applicationContext.xml 추가
+(이것이 Root Application Context)
+
+3) Root Application Context안에 Dao를 넣어줌
+
+4) Web application Context에서 Root Application Context안에있는 Dao를 꺼내올수 있도록 꽂아줌 (DI과정)
+
+5) <!-- service -->
+
+6) <!-- doGet(request, response) -->
+
+
+
+com.bitacademy.emaillist.controller
+|- EmaillistController
+com.bitacademy.emaillist.repository
+|- EmaillistRepository
+com.bitacademy.emaillist.vo
+|-EmaillistVo
