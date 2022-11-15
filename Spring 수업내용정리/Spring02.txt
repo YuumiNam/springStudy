@@ -1,0 +1,27 @@
+1. Spring이 돌아가는 순서
+1) pom.xml에 Spring Context(Container), SpringMVC, Spring Web을 dependencies로 추가
+
+2) web.xml에 Dispatcher Servlet 추가 (servlet, servlet-mapping)
+
+<!-- init -->
+3) Dispatcher Servlet에 init param이 없다면 web.xml있는 디렉토리에 spring(설정해줬던 Dispatcher Servlet의 서블릿이름)-servlet.xml 추가
+(이것이 Web(=MVC모델) Application Context)
+
+4) spring-servlet.xml에 어떤 패키지의 annotation을 스캔할 것인지 범위를 지정해줌
+
+5) 지정해준 패키지에 controller를 만들어줌
+(여기에서 MVC를 도와주는 인터페이스 = HandlerMapping, ViewResolver, MassegeConverter가 일어남)
+
+6) @Controller와 @RequestMapping("/hello4") {return "/WEB-INF/views/hello4.jsp" }; 을 만들어줌
+(HandlerMapping에서 RequestMapping의 url과 param 그리고 return등등의 정보가 저장됨)
+
+<!-- service -->
+7) Dao는 단일 데이터 접근로직이다. SQL 하나 보내고 결과를 받는 것이 전부인 로직.
+만약, 여러 번의 DB접근이 필요하거나 병렬식으로 동시접근하여 데이터를 가져와야하는 상황이 발생한다면?
+이럴때 service라는 개념이 나온다.
+하나의 서비스를 위해 여러개의 DAO를 묶은 트랜잭션이 생성되고 Service는 곧 트랜잭션의 단위가 된다.
+
+<!-- doGet(request, response) -->
+8) Handler에게 url을 주고 정보를 받음
+String
+ModelAndView
