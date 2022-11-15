@@ -43,12 +43,3 @@ ModelAndView
 5) <!-- service -->
 
 6) <!-- doGet(request, response) -->
-
-
-
-com.bitacademy.emaillist.controller
-|- EmaillistController
-com.bitacademy.emaillist.repository
-|- EmaillistRepository
-com.bitacademy.emaillist.vo
-|-EmaillistVo
