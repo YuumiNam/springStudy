@@ -12,6 +12,7 @@
 <body>
 	<form action="${pageContext.request.contextPath }/delete" method="post">
 	<input type="hidden" name = "no" value="${param.no }"> <!-- value="${no }"  PathVariable 방식-->
+														   <!-- no를 action의 url에 바로 넣어줄 수도 있음 -->
 	<table>
 		<tr>
 			<td>비밀번호 : </td>

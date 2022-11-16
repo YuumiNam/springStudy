@@ -33,7 +33,7 @@ public class GuestbookController {
 	
 	/* PathVariable 방식
 	 * 
-	 * @RequestMapping("/delete/{no}")
+	 * @RequestMapping("/delete/{no}", method=RequestMethod.GET)
 		public String delete(@PathVariable("no") Long no, Model model) {
 		model.addAttribute("no", no);
 		return "/WEB-INF/views/delete.jsp";
@@ -47,4 +47,16 @@ public class GuestbookController {
 		guestbookrepository.deleteByNoAndPassword(no, password);
 		return "redirect:/";
 	}
+	
+	/* no를 action의 url에 바로 넣어줬을때
+	 * 
+	 * @RequestMapping("/delete/{no}", method=RequestMethod.POST)
+		public String delete(@PathVariable("no") Long no, @RequestParam(value="password", required=true, defaltValue="") String password) {
+		
+		guestbookrepository.deleteByNoAndPassword(no, password);
+		
+		return "redirect:/";
+		}
+	 * 
+	 */
 }
