@@ -11,7 +11,7 @@
 
 <body>
 	<form action="${pageContext.request.contextPath }/delete" method="post">
-	<input type="hidden" name = "no" value="${param.no }">
+	<input type="hidden" name = "no" value="${param.no }"> <!-- value="${no }"  PathVariable 방식-->
 	<table>
 		<tr>
 			<td>비밀번호 : </td>

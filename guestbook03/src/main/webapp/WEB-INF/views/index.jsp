@@ -30,13 +30,15 @@
 	
 	
 	<!-- 게스트 리스트 -->
+	<c:set var = "count" value = "${fn:length(list) }" />
 	<c:forEach var = "vo" items = '${list }' varStatus = 'status'>
-	<table width=510 border=1>
+	<table width = "510" border = "1">
 		<tr>
-			<td>[${status.index + 1}]</td>
+			<td>[${count - status.index }]</td>
 			<td>${vo.name }</td>
 			<td>${vo.date }</td>
-			<td><a href="./delete?no=${vo.no }">삭제</a></td>
+			<td><a href="./delete?no=${vo.no }">삭제</a></td> <!-- RequestParam 방식 -->
+			<!-- <td><a href="./delete/${vo.no }">삭제</a></td>  PathVariable 방식-->
 		</tr>
 		
 		<tr>
