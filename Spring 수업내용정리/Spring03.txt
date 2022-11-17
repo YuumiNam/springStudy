@@ -1,0 +1,26 @@
+자바스프링 예외처리(Exception)
+
+try {
+.....
+} catch(e) {
+   1. 사과
+   2. 로그
+   3. 정상종료
+} finally {
+
+}
+
+Unchecked Exception -> Logic Error
+Checked Exception -> 찐예외
+
+
+<Spring에서 예외를 처리하는법>
+1) Repository에 있는 예외를 Service로 throw하되 의미있게 RuntimeException으로 래핑한다.
+2) Service에서도 똑같이 Controller로 throw시킨다.
+3) Controller로 온 모든 예외들을 "AOP기술"을 통하여 바깥으로 빼서 처리한다.
+
+
+AOP기술
+what   :  advice
+when  :  join point --> before, after, after returning, after throwing, around(before + after)
+where :  point cut  -->  which method
