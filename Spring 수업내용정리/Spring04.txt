@@ -1,0 +1,44 @@
+1. 로깅
+- 종류
+1) java.util.logging			(안씀)
+2) Apache의 Jakarta Commons Logging	(표준, 하지만 편의성x)
+3) Log4J				(x)
+    ALog, BLog, CLog
+
+========================================
+
+- 현재 실제 어플리케이션 개발시 쓰이는 로깅 프로그램
+Slf4J	    (인터페이스)
+Logback       (구현체)
+
+
+
+
+2. 로깅 설정
+<appender>	<logger>
+console		
+|
+file1	--------	package1
+|
+file2	--------	package2
+
+
+
+
+3. filters와 interceptors의 차이
+ex)
+/mysite03/...  ->   DispatcherServlet  ->  controller01, controller02 ...
+	    |		       |
+	 filters...		 interceptors...
+         (Spring Security)            (사용자 로그인)
+
+
+
+
+4. interceptors를 통한 사용자 로그인 관리
+(Controller에서 로그인에 관한 코드 빼기)
+
+1) 기존 authUser session처리(login, logout)는 Interceptor쪽으로 뺀다.
+2) Access Control은 본인이 Auth라는 annotation을 만들어서 update 쪽에 @Auth를 써준다.
+3) authUser라는 Parameter를 써주기 위해서는 어쩔수없이 HttpSession을 살릴 수 밖에 없었는데 이것을 해결하기위해
+메소드의 괄호 안에 @AuthUser라는 나만의 annotation을 만들어서 @AuthUser UserVo authUser를 써준다.
