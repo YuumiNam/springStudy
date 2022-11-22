@@ -1,0 +1,38 @@
+1. 파일업로드
+
+<일반적인 POST방식>
+POST /mysite/user/join HTTP/1.1
+..
+..
+..
+name=이선무&email=dltjsam@gmail.com&password=1234&.....
+
+
+<multipart(파일업로드)>
+POST /fileupload/upload HTTP/1.1
+..
+..
+..
+분리자: ===Azx019uif
+encoding: utf-8
+===Azx019uif
+email=dltjsam@gmail.com
+===Azx019uif
+name:file
+..
+..
+sdfsdfdddsfsf213948
+sdkfskdfsdfsdkj-21
+sdjflksdjlfj
+fkdfsdfjklas213542323
+sdfdweff21324
+
+
+
+
+
+2. 방법
+
+Multipart Resolver세팅해주고 이것을 통해
+common fileupload 라이브러리를 이용해서 MultipartFile에 처리결과를 담고
+Controller의 handler에 Multiaprt 파라미터 타입을 받아야한다.
