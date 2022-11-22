@@ -22,7 +22,7 @@
 	<br><br>
 	
 	<br>
-	<input type="submit" value="upload">
+	<input type="submit" value="업로드">
 </form>
 </body>
 </html>
