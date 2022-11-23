@@ -19,8 +19,8 @@
 		</mvc:interceptor>
 		
 		<mvc:interceptor>
-			<mvc:mapping path="/guestbook/**" />
-			<bean class="com.bitacademy.helloweb.interceptor.MyInterceptor02" />
+			<mvc:mapping path="/guestbook/**" /> <!-- url 설정 -->
+			<bean class="com.bitacademy.helloweb.interceptor.MyInterceptor02" /> <!-- intercepter 설정 -->
 		</mvc:interceptor>
 	</mvc:interceptors>
 	
