@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-public class MyInterceptor02 extends HandlerInterceptorAdapter {
+public class MyInterceptor02 extends HandlerInterceptorAdapter { // HandlerInterceptorAdapter은 spring버전 높으면 에러남 비추
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
