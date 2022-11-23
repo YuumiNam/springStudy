@@ -1,10 +1,10 @@
-package main;
+package com.bitacademy.aopstudy.main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import service.ProductService;
-import vo.ProductVo;
+import com.bitacademy.aopstudy.service.ProductService;
+import com.bitacademy.aopstudy.vo.ProductVo;
 
 public class MainApp {
 

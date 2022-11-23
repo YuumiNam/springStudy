@@ -1,4 +1,4 @@
-package vo;
+package com.bitacademy.aopstudy.vo;
 
 public class ProductVo {
 	private String name;
