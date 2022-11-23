@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class MyInterceptor01 implements HandlerInterceptor {
 	// container가 있는 spring-servlet에 어떤 controller를 intercepter할지 경로를 정함
 	
-	@Override
+	@Override // 주로 preHandle만씀 그래서 HandlerInterceptorAdapter를 불러와서 필요한 것만 overriding하는 방법을 더 선호함
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		System.out.println("MyInterceptor01.preHandle(...) called");
