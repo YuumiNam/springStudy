@@ -14,8 +14,8 @@
 	
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/board/**" />
-			<bean class="com.bitacademy.helloweb.interceptor.MyInterceptor01" />
+			<mvc:mapping path="/board/**" /> <!-- url 설정 -->
+			<bean class="com.bitacademy.helloweb.interceptor.MyInterceptor01" /> <!-- intercepter 설정 -->
 		</mvc:interceptor>
 		
 		<mvc:interceptor>
