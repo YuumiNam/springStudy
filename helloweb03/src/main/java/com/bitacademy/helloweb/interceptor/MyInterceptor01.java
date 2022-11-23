@@ -7,7 +7,8 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 public class MyInterceptor01 implements HandlerInterceptor {
-
+	// container가 있는 spring-servlet에 어떤 controller를 intercepter할지 경로를 정함
+	
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
