@@ -13,27 +13,27 @@
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
 	
 		<!-- 기본 생성자로 빈 생성하기 -->
-		<bean id="user01" name="usr01" class="com.bitacademy.container.user.User" />
+		<bean id="user01" name="usr01" class="com.bitacademy.container.user.User02" />
 		
 		<!-- 파라미터 1개인 생성자로 빈 생성하기 -->
-		<bean id="user02" name="usr02" class="com.bitacademy.container.user.User" >
+		<bean id="user02" name="usr02" class="com.bitacademy.container.user.User02" >
 			<constructor-arg value="또치" />
 		</bean>
 		
 		<!-- 파라미터 2개인 생성자로 빈 생성하기1 -->
-		<bean id="user03" name="usr03" class="com.bitacademy.container.user.User" >
+		<bean id="user03" name="usr03" class="com.bitacademy.container.user.User02" >
 			<constructor-arg value="3" />
 			<constructor-arg value="도우너" />
 		</bean>
 		
 		<!-- 파라미터 2개인 생성자로 빈 생성하기2 --> <!-- no와 string의 순서를 뒤집었음 -->
-		<bean id="user04" class="com.bitacademy.container.user.User" >
+		<bean id="user04" class="com.bitacademy.container.user.User02" >
 			<constructor-arg index="1" value="희동이" />
 			<constructor-arg index="0" value="4" />
 		</bean>
 		
 		<!-- setter 사용하기 -->
-		<bean id="user05" class="com.bitacademy.container.user.User" >
+		<bean id="user05" class="com.bitacademy.container.user.User02" >
 			<property name="no" value="5" />
 			<property name="name" value="고길동" />
 		</bean>
@@ -42,14 +42,14 @@
 		<bean id="friend" class="com.bitacademy.container.user.Friend" >
 			<constructor-arg value="짱구" />
 		</bean>
-		<bean id="user06" class="com.bitacademy.container.user.User" >
+		<bean id="user06" class="com.bitacademy.container.user.User02" >
 			<property name="no" value="6" />
 			<property name="name" value="맹구" />
 			<property name="friend" ref="friend" />
 		</bean>
 		
 		<!-- setter 사용한 Collection 객체(List) 생성 -->
-		<bean id="user07" class="com.bitacademy.container.user.User" >
+		<bean id="user07" class="com.bitacademy.container.user.User02" >
 			<property name="no" value="7" />
 			<property name="name" value="아이언맨" />
 			<property name="friends" >
