@@ -35,7 +35,7 @@
 		|--- CDPlayerConfigTest.java
 		|--- MyTest.java
 	com.bitacademy.container.config.videosystem (Java Config Explicity)
-		|--- DVDPlayerConfig.java
+		|--- DVDPlayerConfigTest.java
 
 [container.jar]
    com
