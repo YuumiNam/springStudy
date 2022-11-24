@@ -3,16 +3,39 @@
 		|--- User01.java
 		|--- User.java
 		|--- Friend.java
+		
+	com.bitacademy.container.soundsystem (Java Config Auto)
+		|--- CompactDisc.java
+		|--- HighSchoolRapper2.java
+		|--- CDPlayer.java
+	com.bitacademy.container.videosystem (Java Config Explicity)
+		|--- DigitalVideoDisc.java
+		|--- HighSchoolRapper2.java
+		|--- DVDPlayer.java		
+		
 	com.bitacademy.container.user.test
 		|--- XmlConfigTest.java
 		|--- AppConfigTest.java
     com.bitacademy.container.config.user
 	    |--- AppConfig01.java
 		|--- AppConfig02.java
+		
+	com.bitacademy.container.config.soundsystem (Java Config Auto)
+		|--- CDPlayerConfig.java
+	com.bitacademy.container.config.videosystem (Java Config Explicity)
+		|--- DVDPlayerConfig.java
+
 [src/main/resource]
 	com.bitacademy.container.config.user
 		|--- applicationContext01.xml
 		|--- applicationContext02.xml
+
+[src/test/java]
+	com.bitacademy.container.config.soundsystem (Java Config Auto)
+		|--- CDPlayerConfigTest.java
+		|--- MyTest.java
+	com.bitacademy.container.config.videosystem (Java Config Explicity)
+		|--- DVDPlayerConfig.java
 
 [container.jar]
    com
