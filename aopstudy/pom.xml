@@ -6,6 +6,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>aopstudy</artifactId>
+	<packaging>jar</packaging>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,4 +33,8 @@
 		</dependency>
 	
 	</dependencies>
+	
+	<build>
+		<finalName>aopstudy</finalName>
+	</build>
 </project>

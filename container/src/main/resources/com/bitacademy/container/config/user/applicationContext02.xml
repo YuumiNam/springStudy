@@ -13,7 +13,7 @@
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
 	
 		<!-- 기본 생성자로 빈 생성하기 -->
-		<bean id="user" name="usr" class="com.bitacademy.container.user.User" />
+		<bean id="user01" name="usr01" class="com.bitacademy.container.user.User" />
 		
 		<!-- 파라미터 1개인 생성자로 빈 생성하기 -->
 		<bean id="user02" name="usr02" class="com.bitacademy.container.user.User" >
@@ -39,4 +39,25 @@
 		</bean>
 		
 		<!-- DI -->
+		<bean id="friend" class="com.bitacademy.container.user.Friend" >
+			<constructor-arg value="짱구" />
+		</bean>
+		<bean id="user06" class="com.bitacademy.container.user.User" >
+			<property name="no" value="6" />
+			<property name="name" value="맹구" />
+			<property name="friend" ref="friend" />
+		</bean>
+		
+		<!-- setter 사용한 Collection 객체(List) 생성 -->
+		<bean id="user07" class="com.bitacademy.container.user.User" >
+			<property name="no" value="7" />
+			<property name="name" value="아이언맨" />
+			<property name="friends" >
+				<list>
+					<value>스파이더맨</value>
+					<value>캡틴아메리카</value>
+					<value>토르</value>
+				</list>
+			</property>
+		</bean>
 </beans>
