@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.bitacademy.container.config.user.AppConfig01;
-import com.bitacademy.container.user.User;
+import com.bitacademy.container.user.User02;
 import com.bitacademy.container.user.User01;
 
 public class AppConfigTest {
@@ -18,7 +18,7 @@ public class AppConfigTest {
 	private static void testAppConfig01() {
 		ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig01.class);
 		
-		User user = ac.getBean(User.class);
+		User02 user = ac.getBean(User02.class);
 		System.out.println(user);
 	}
 	
@@ -27,7 +27,7 @@ public class AppConfigTest {
 	private static void testAppConfig02() {
 		ApplicationContext ac = new AnnotationConfigApplicationContext("com.bitacademy.container.config.user");
 		
-		User user = ac.getBean(User.class);
+		User02 user = ac.getBean(User02.class);
 		System.out.println(user);
 		
 		 User01 user01 = ac.getBean(User01.class);

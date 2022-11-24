@@ -2,7 +2,7 @@ package com.bitacademy.container.user;
 
 import java.util.List;
 
-public class User {
+public class User02 {
 	// 필드
 	private Long no = 0L;
 	private String name = "마이콜";
@@ -10,15 +10,15 @@ public class User {
 	private List<String> friends;
 	
 	// 생성자
-	public User() {
+	public User02() {
 		
 	}
 	
-	public User(String name) {
+	public User02(String name) {
 		this.name = name;
 	}
 	
-	public User(Long no, String name) {
+	public User02(Long no, String name) {
 		this.no = no;
 		this.name = name;
 	}
