@@ -11,5 +11,6 @@
 		<module>logex</module>
 		<module>fileupload</module>
 		<module>aopstudy</module>
+		<module>container</module>
 	</modules>
 </project>
