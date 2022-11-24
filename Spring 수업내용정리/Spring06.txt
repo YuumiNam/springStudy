@@ -1,0 +1,43 @@
+AOP 구성요소
+"What을 When? Where? 실행!"
+  |              |             |
+advice   joinPoint   joinCut
+
+
+advice = 클래스의 특정메소드 (횡단관심모듈)
+joinPoint = 특정 시점에서만 삽입 가능하도록
+joinCut = 어느 조인포인트에 삽입할지  which method
+
+
+5가지 joinPoint
+before, after, after returning, after throwing, around
+
+com.bitacademy.mysite.aspect
+
+
+
+
+XML Config
+자동(annotation scanning)
+수동(명시적으로 빈설정) ex)SqlSession
+
+Java Config  -- XML Config보다 많이쓰임 --
+자동(annotation scanning)
+수동(명시적으로 빈설정) ex)SqlSession
+
+
+user : xml, java config
+
+com.bitacademy.container.user
+|-- User01 (자동설정)
+|-- User (수동설정)
+|-- Friend
+com.bitacademy.container.user.test
+|-- XmlConfigTest (xml)
+|-- AppConfigTest (java)
+com.bitacademy.container.config.user
+|-- applicationContext01.xml (자동설정)
+|-- applicationContext02.xml (수동설정)
+
+
+com.bitacademy.container.soundsystem : java config
