@@ -1,0 +1,33 @@
+[src/main/java]
+	com.bitacademy.container.user
+		|--- User01.java
+		|--- User.java
+		|--- Friend.java
+	com.bitacademy.container.user.test
+		|--- XmlConfigTest.java
+		|--- AppConfigTest.java
+    com.bitacademy.container.config.user
+	    |--- AppConfig01.java
+		|--- AppConfig02.java
+[src/main/resource]
+	com.bitacademy.container.config.user
+		|--- applicationContext01.xml
+		|--- applicationContext02.xml
+
+[container.jar]
+   com
+	|- bitacademy
+		|- container
+			|- user
+			|   |- test
+			|   |    |- XmlConfigTest.class
+			|   |    |- AppConfigTest.class
+			|   |- User01.class
+			|   |- User.class
+			|   |- Friend.class
+			|- config
+			    |- user
+				|- AppConfig01.class
+				|- AppConfig02.class
+				|- applicationContext01.xml	
+				|- applicationContext02.xml
