@@ -12,5 +12,31 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
 	
-	
+		<!-- 기본 생성자로 빈 생성하기 -->
+		<bean id="user" name="usr" class="com.bitacademy.container.user.User" />
+		
+		<!-- 파라미터 1개인 생성자로 빈 생성하기 -->
+		<bean id="user02" name="usr02" class="com.bitacademy.container.user.User" >
+			<constructor-arg value="또치" />
+		</bean>
+		
+		<!-- 파라미터 2개인 생성자로 빈 생성하기1 -->
+		<bean id="user03" name="usr03" class="com.bitacademy.container.user.User" >
+			<constructor-arg value="3" />
+			<constructor-arg value="도우너" />
+		</bean>
+		
+		<!-- 파라미터 2개인 생성자로 빈 생성하기2 --> <!-- no와 string의 순서를 뒤집었음 -->
+		<bean id="user04" class="com.bitacademy.container.user.User" >
+			<constructor-arg index="1" value="희동이" />
+			<constructor-arg index="0" value="4" />
+		</bean>
+		
+		<!-- setter 사용하기 -->
+		<bean id="user05" class="com.bitacademy.container.user.User" >
+			<property name="no" value="5" />
+			<property name="name" value="고길동" />
+		</bean>
+		
+		<!-- DI -->
 </beans>
