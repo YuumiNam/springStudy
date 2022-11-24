@@ -39,11 +39,11 @@ public class XmlConfigTest {
 		User user = null;
 		
 		// id로 bean 가져오기. 수동설정은 id가 자동으로 생성안되므로 꼭 만들어줘야함
-		user = (User)ac.getBean("user");
+		user = (User)ac.getBean("user01");
 		System.out.println(user);
 		
 		// name으로 bean 가져오기
-		user = (User)ac.getBean("usr");
+		user = (User)ac.getBean("usr01");
 		System.out.println(user);
 		
 		// Type으로 bean 가져오기
@@ -71,8 +71,16 @@ public class XmlConfigTest {
 		
 		
 		
-		// setter로 초기화한 bean 가져오기
+		// setter로 초기화한 bean 가져오기1
 		user = ac.getBean("user05",User.class);
+		System.out.println(user);
+		
+		// setter로 초기화한 bean 가져오기2 (DI)
+		user = ac.getBean("user06",User.class);
+		System.out.println(user);
+		
+		// setter로 초기화한 bean 가져오기3 (Collection 객체 - List)
+		user = ac.getBean("user07",User.class);
 		System.out.println(user);
 	}
 
