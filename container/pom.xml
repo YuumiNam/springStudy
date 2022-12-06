@@ -45,5 +45,19 @@
 	
 	<build>
 		<finalName>container</finalName>
+		<plugins>
+			<!-- jenkins에서 test에러 안뜨게함 -->
+			<plugin>
+				<groupId>org.junit.platform</groupId>
+				<artifactId>junit-platform-surefire-provider</artifactId>
+				<version>1.3.2</version>	
+			</plugin>
+			
+			<plugin>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter.engine</artifactId>
+				<version>5.8.2</version>
+			</plugin>
+		</plugins>
 	</build>
 </project>
